@@ -134,8 +134,15 @@ export default function Contact(props) {
 
 			const onConfirm = () => {
 				setLoading(true);
-				const cors = 'https://cors-anywhere.herokuapp.com/';
-				axios.get( `${cors}https://us-central1-material-ui-course-828f0.cloudfunctions.net/sendMail`)
+				
+				axios.get( "https://us-central1-material-ui-course-828f0.cloudfunctions.net/sendMail" ,
+				   {params : {
+				   		name : name ,
+				   		email : email ,
+				   		phone : phone ,
+				   		message : message
+				   }}
+				   )
 				  .then(response => {
 				  	setLoading(false);
 				  	setOpen(false);
