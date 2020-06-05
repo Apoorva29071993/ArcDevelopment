@@ -209,7 +209,7 @@ export default function Contact(props) {
 									</Grid>
 								</Grid>
 
-								<Grid item container direction="column" style={{maxWidth : "20em"}}>
+								<Grid item container direction="column" style={{width : "20em"}}>
 									<Grid item style={{marginBottom : "0.5em"}}>
 										<TextField fullWidth label="Name" id="name" 
 										value={name} onChange={(event) => setName(event.target.value)}/>
@@ -226,7 +226,7 @@ export default function Contact(props) {
 									</Grid>
 								</Grid>
 
-								<Grid item container style={{maxWidth : "20em"}}>
+								<Grid item container style={{width : "20em"}}>
 									<TextField id="message" InputProps={{disableUnderline : true}} multiline rows={10} className={classes.message}
 										value={message} onChange={(event) => setMessage(event.target.value)}/>	
 								</Grid>
@@ -243,13 +243,13 @@ export default function Contact(props) {
 				</Grid>	
 
 
-					<Dialog style={{zIndex : 1302}} fullScreen={matchesXS} open={open} onClose={() => setOpen(false)} 
+					<Dialog style={{zIndex : 1302}} fullScreen={matchesSM} open={open} onClose={() => setOpen(false)} 
 					PaperProps={{
 						style : {
 							paddingTop : matchesXS ? "1em" : "5em" ,
 						   paddingBottom : matchesXS ? "1em" : "5em" ,
-						   paddingLeft : matchesXS ? 0 : matchesSM ? "5em" : matchesMD ? "10em" : "20em" ,
-						   paddingRight : matchesXS ? 0 : matchesSM ? "5em" : matchesMD ? "10em" : "20em"
+						   paddingLeft : matchesXS ? 0 : matchesSM ? "5em" : matchesMD ? "15em" : "25em" ,
+						   paddingRight : matchesXS ? 0 : matchesSM ? "5em" : matchesMD ? "15em" : "25em"
 						    }
 						 }}
 						 >
@@ -272,7 +272,7 @@ export default function Contact(props) {
 										error={phoneHelper.length !== 0} helperText={phoneHelper}
 										value={phone} onChange={onChange}/>
 									</Grid>
-									<Grid item style={{maxWidth : matchesXS ? "100%" : "20em"}}>
+									<Grid item style={{width : matchesSM ? "100%" : "20em"}}>
 									<TextField id="message" fullWidth InputProps={{disableUnderline : true}} multiline rows={10} className={classes.message}
 										value={message} onChange={(event) => setMessage(event.target.value)}/>	
 								   </Grid>
