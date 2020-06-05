@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 })
 
 let mailOptions = {
-	from : "Arc Development" ,
+	from : "Arc Development" 
 	
 }
 
