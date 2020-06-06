@@ -228,7 +228,7 @@ export default function Contact(props) {
 
 								<Grid item container style={{width : "20em"}}>
 									<TextField id="message" InputProps={{disableUnderline : true}} multiline rows={10} className={classes.message}
-										value={message} onChange={(event) => setMessage(event.target.value)}/>	
+										value={message} placeholder="Tell us more about your project" onChange={(event) => setMessage(event.target.value)}/>	
 								</Grid>
 
 								<Grid item container justify="center" style={{marginTop : "2em"}}>
